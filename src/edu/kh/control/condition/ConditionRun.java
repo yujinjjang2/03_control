@@ -13,7 +13,7 @@ public class ConditionRun {
 		//condition.ex5();
 		//condition.ex6();
 		//condition.ex7();
-		//condition.ex8();
+		condition.ex8();
 	}
 
 }
