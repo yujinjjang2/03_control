@@ -57,7 +57,7 @@ public class ConditionExample {
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
 		
-		if( input % 2 != 0) {
+		if( input % 2 != 0 ) {
 			System.out.println("홀수 입니다.");
 			
 		} else { // 짝수 또는 0 입력 시 수행
@@ -158,12 +158,12 @@ public class ConditionExample {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("나이 입력 : ");
+		System.out.print("나이 : ");
 		int age = sc.nextInt();
 		
 		if(age <= 13) {
 			System.out.println("어린이 입니다.");
-		} else if((age > 13) && (age <= 19)) {
+		} else if(age > 13 && age <= 19) {
 			System.out.println("청소년 입니다.");
 		} else {
 			System.out.println("성인 입니다.");
@@ -175,18 +175,18 @@ public class ConditionExample {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("점수 입력 : ");
+		System.out.print("점수 : ");
 		int score = sc.nextInt();
 		
-		if(score >= 90) {
+		if(score >= 90 && score <= 100) {
 			System.out.println("A");
-		} else if(score >= 80 && score < 90) {
+		} else if (score >= 80 && score < 90) {
 			System.out.println("B");
-		} else if(score >= 70 && score < 80) {
+		} else if (score >= 70 && score < 80) {
 			System.out.println("C");
-		} else if(score >= 60 && score < 70) {
+		} else if (score >= 60 && score < 70) {
 			System.out.println("D");
-		} else if(score < 60) {
+		} else if (score < 60 && score >= 0) {
 			System.out.println("F");
 		} else {
 			System.out.println("잘못 입력하셨습니다");
@@ -195,28 +195,61 @@ public class ConditionExample {
 	
 	public void ex7() {
 		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("나이 입력 : ");
-		int age = sc.nextInt();
-		
-		double height = 140.0;
-		
-		if(age >= 12) {
-			if(height >= 140.0) {
-				System.out.println("탑승 가능");
-			} else if(height < 140.0) {
-				System.out.println("적정 키가 아닙니다.");
-			}
-		} else if(age < 12) {
-			System.out.println("적정 연령이 아닙니다.");
-		} else {
-			System.out.println("잘못 입력 하셨습니다.");
-		}
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.print("나이 : ");
+		 int age = sc.nextInt();
+		 
+		 System.out.print("키 : ");
+		 double height = sc.nextDouble();
+		 
+		  if(age >= 12 && age <= 100) {
+			 if(height >= 140) {
+				 System.out.println("탑승 가능");
+			 } else {
+				 System.out.println("적정 키가 아닙니다.");
+			 }
+		  } else if(age < 12 && age >= 0) {
+			  System.out.println("적정 연령이 아닙니다.");
+		  } else {
+			  System.out.println("잘못 입력 하셨습니다.");
+		  }
 	}
 	
 	
 	public void ex8() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 : ");
+		int age = sc.nextInt();
+		
+		if(age < 0 || age > 100) {
+			System.out.println("나이를 잘못 입력 하셨습니다.");
+			return;
+		}
+		
+		System.out.print("키 : ");
+		double height = sc.nextInt();
+		
+		if(height < 0 || height > 250.0) {
+			System.out.println("키를 잘못 입력 하셨습니다.");
+			return;
+		}
+		
+		if(age >= 12) {
+			if(height >= 140.0) {
+				System.out.println("탑승 가능");
+			} else {
+				System.out.println("나이는 적절하나, 키가 적절치 않음");
+			}
+		} else if(age < 12) {
+			if(height >= 140.0) {
+				System.out.println("키는 적절하나, 나이는 적절치 않음");
+			} else {
+				System.out.println("나이와 키 모두 적절치 않음");
+			}
+		}
 		
 	}
 }
