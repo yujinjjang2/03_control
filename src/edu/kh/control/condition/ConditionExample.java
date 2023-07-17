@@ -152,4 +152,71 @@ public class ConditionExample {
 		
 		System.out.println(season);
 	}
+	
+	
+	public void ex5() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		
+		if(age <= 13) {
+			System.out.println("어린이 입니다.");
+		} else if((age > 13) && (age <= 19)) {
+			System.out.println("청소년 입니다.");
+		} else {
+			System.out.println("성인 입니다.");
+		}
+	}
+	
+	
+	public void ex6() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("점수 입력 : ");
+		int score = sc.nextInt();
+		
+		if(score >= 90) {
+			System.out.println("A");
+		} else if(score >= 80 && score < 90) {
+			System.out.println("B");
+		} else if(score >= 70 && score < 80) {
+			System.out.println("C");
+		} else if(score >= 60 && score < 70) {
+			System.out.println("D");
+		} else if(score < 60) {
+			System.out.println("F");
+		} else {
+			System.out.println("잘못 입력하셨습니다");
+		}
+	}
+	
+	public void ex7() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		
+		double height = 140.0;
+		
+		if(age >= 12) {
+			if(height >= 140.0) {
+				System.out.println("탑승 가능");
+			} else if(height < 140.0) {
+				System.out.println("적정 키가 아닙니다.");
+			}
+		} else if(age < 12) {
+			System.out.println("적정 연령이 아닙니다.");
+		} else {
+			System.out.println("잘못 입력 하셨습니다.");
+		}
+	}
+	
+	
+	public void ex8() {
+		
+	}
 }
