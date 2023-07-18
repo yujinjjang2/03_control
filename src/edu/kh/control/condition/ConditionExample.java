@@ -3,6 +3,10 @@ package edu.kh.control.condition;
 import java.util.Scanner;
 
 public class ConditionExample {
+	
+	//Scanner sc = new Scanner(System.in);
+	//클래스 레벨인 전역에 적어주면 매 매소드마다 Scanner 적지 않아도 됨
+	//하단 메소드들이 sc 다 가져다 쓸 수 있음
 
 	public void ex1() {
 		
@@ -156,7 +160,7 @@ public class ConditionExample {
 	
 	public void ex5() {
 		
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		
 		System.out.print("나이 : ");
 		int age = sc.nextInt();
@@ -167,13 +171,29 @@ public class ConditionExample {
 			System.out.println("청소년 입니다.");
 		} else {
 			System.out.println("성인 입니다.");
+		}*/
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		
+		if(age <= 13) {
+			System.out.println("어린이 입니다.");
+			
+		} else if(age > 19) {
+			System.out.println("성인입니다.");
+			
+		} else {
+			System.out.println("청소년 입니다.");
+			
 		}
 	}
 	
 	
 	public void ex6() {
 		
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		
 		System.out.print("점수 : ");
 		int score = sc.nextInt();
@@ -190,12 +210,41 @@ public class ConditionExample {
 			System.out.println("F");
 		} else {
 			System.out.println("잘못 입력하셨습니다");
+		}*/
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("점수 입력(0~100) : ");
+		int score = sc.nextInt();
+		
+		String result;
+		
+		if(score < 0 || score > 100) {
+			result = "잘못 입력하셨습니다!";
+			
+		} else if(score >= 90) {
+			result = "A";
+			
+		} else if(score >= 80) {
+			result = "B";
+			
+		} else if(score >= 70) {
+			result = "C";
+			
+		} else if(score >= 60) {
+			result = "D";
+			
+		} else {
+			result = "F";
 		}
+		
+		System.out.println(result);
+		
 	}
 	
 	public void ex7() {
 		
-		 Scanner sc = new Scanner(System.in);
+		 /*Scanner sc = new Scanner(System.in);
 		 
 		 System.out.print("나이 : ");
 		 int age = sc.nextInt();
@@ -213,13 +262,43 @@ public class ConditionExample {
 			  System.out.println("적정 연령이 아닙니다.");
 		  } else {
 			  System.out.println("잘못 입력 하셨습니다.");
-		  }
+		  }*/
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		
+		String result;
+		
+		if(age < 0 || age > 100) {
+			result = "잘못 입력하셨습니다!";
+			
+		} else {
+			System.out.print("키 입력 : ");
+			double height = sc.nextDouble();
+			
+			if (age < 12) {
+				result = "적정 연령이 아닙니다";
+				
+			} else if(height < 140.0) {
+				result = "적정 키가 아닙니다";
+				
+			} else {
+				result = "탑승 가능";
+				
+			}
+		}
+		
+		System.out.println(result);
+		
+		
 	}
 	
 	
 	public void ex8() {
 		
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		
 		System.out.print("나이 : ");
 		int age = sc.nextInt();
@@ -249,7 +328,45 @@ public class ConditionExample {
 			} else {
 				System.out.println("나이와 키 모두 적절치 않음");
 			}
+		}*/
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		
+		String result;
+		
+		if(age < 0 || age > 100) {
+			result = "나이를 잘못 입력하셨습니다.";
+			
+		} else {
+			
+			System.out.print("키 입력 : ");
+			double height = sc.nextDouble();
+			
+			if(height < 0 || height > 250) {
+				result = "키를 잘못 입력하셨습니다.";
+				
+			} else {
+				
+				if(age < 12 && height >= 140.0) { // 나이 X, 키 O
+					result = "키는 적절하나, 나이가 적절치 않음";
+					
+				} else if(age >= 12 && height < 140.0) { // 나이 O, 키 x
+					result = "나이는 적절하나, 키가 적절치 않음";
+					
+				} else if(age < 12 && height < 140.0) { // 나이 x, 키 x
+					result = "나이와 키 모두 적절치 않음";
+					
+				} else { // 나이 O, 키 O
+					result = "탑승 가능";
+					
+				}
+				
+			}
 		}
+		System.out.println(result);
 		
 	}
 }

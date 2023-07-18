@@ -11,9 +11,14 @@ public class ConditionRun {
 		//condition.ex3();
 		//condition.ex4();
 		//condition.ex5();
-		condition.ex6();
+		//condition.ex6();
 		//condition.ex7();
 		//condition.ex8();
+		
+		SwitchExample switchEx = new SwitchExample();
+		
+		//switchEx.ex1();
+		//switchEx.ex2();
 	}
 
 }
