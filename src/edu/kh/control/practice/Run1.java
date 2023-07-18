@@ -9,8 +9,8 @@ public class Run1 {
 		//cp.practice1();
 		//cp.practice2();
 		//cp.practice3();
-		//cp.practice4();
-		cp.practice5();
+		cp.practice4();
+		//cp.practice5();
 	}
 
 }

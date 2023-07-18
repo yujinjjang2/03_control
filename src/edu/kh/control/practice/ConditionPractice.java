@@ -132,7 +132,7 @@ public class ConditionPractice {
 			result = "정상체중";
 		} else if(bmi < 25) {
 			result = "과체중";
-		} else if(bmi > 30) {
+		} else if(bmi < 30) {
 			result = "비만";
 		} else {
 			result = "고도비만";
@@ -223,11 +223,6 @@ public class ConditionPractice {
 			
 			
 		}
-		
-		
-		
-		
-		
 		
 	}
 }
