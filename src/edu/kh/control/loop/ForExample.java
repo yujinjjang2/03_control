@@ -310,6 +310,176 @@ public class ForExample {
 			System.out.println("잘못 입력 하셨습니다.");
 		}
 	}
+	
+	// ** 중첩반복문 **
+	public void ex16() {
+		// 구구단 모두 출력하기
+		
+		for(int dan = 2; dan <= 9; dan++) { // 2 ~ 9 단까지 차례대로 증가
+			
+			for(int num = 1; num <=9; num++) { // 각 단에 곱해질 수 1~9까지 차례대로 증가
+				
+				System.out.printf("%2d X %2d = %2d  ", dan, num, dan * num);
+
+			}
+			
+			System.out.println(); // 하나의 단 출력이 끝났을 때 줄바꿈
+			// 아무내용 없는 println() == 줄바꿈
+		}
+
+	}
+	
+	public void ex17() {
+		// 구구단 역순 출력
+		// 9단 -> 2단까지 역방향
+		// 곱해지는 수는 1 -> 9 정방향
+		
+		for(int dan = 9; dan >= 2; dan--) { // 단 9 -> 2 역
+			
+			for(int num = 1; num <= 9; num++) { // 수 1 -> 9 정
+				
+				System.out.printf("%2d X %2d = %2d  ", dan, num, dan * num);
+			}
+			
+			// 한단 출력 종료시점에 줄바꿈
+			System.out.println();
+		}
+		
+	}
+	
+	public void ex18() {
+		// 2중 for 문을 이용해서 다음 모양을 출력하시오
+		
+		// 12345
+		// 12345
+		// 12345
+		// 12345
+		// 12345
+		
+		for(int i = 1; i <= 5; i++) { // 5바퀴 반복하는 for문
+			
+			for(int j = 1; j <= 5; j++) { // 12345 한 줄 출력하는 for문
+				System.out.print(j);
+			}
+			
+			System.out.println();
+		}
+		
+		System.out.println("-----------------------------------");
+		
+		// 54321
+		// 54321
+		// 54321
+		
+		for(int i = 1; i <= 3; i++) {
+			
+			for(int j = 5; j >= 1; j--) {
+				System.out.print(j);
+			}
+			
+			System.out.println();
+		}
+	}
+	
+	public void ex19() {
+		// 2중 for문을 이용하여 다음 모양을 출력하시오.
+		
+		// 1
+		// 12
+		// 123
+		// 1234
+		
+		// 현재 바퀴수와 마지막 찍히는 수가 똑같다(Hint)
+		
+		for(int i = 1; i <= 4; i++) { // 줄반복
+			
+			for(int j = 1; j <= i; j++) { // 출력반복
+				System.out.print(j);
+			}
+			
+			System.out.println();
+		}
+		
+		System.out.println("--------------------------------------");
+		
+		// 4321
+		// 321
+		// 21
+		// 1
+		
+		for(int x = 4; x >= 1; x--) { // 줄반복
+			
+			for(int i = x; i >= 1; i--) {
+				System.out.print(i);
+			}
+			
+			System.out.println();
+		}
+		
+	}
+	
+	public void ex20() {
+		// 숫자세기 count
+		
+		// 1부터 20까지 1씩 증가하면서
+		// 3의 배수의 총 개수 출력
+		// 3의 배수의 합계 출력
+		
+		// 3 6 9 12 15 18 : 6개
+		// 3의 배수 합계 : 63
+		
+		int count = 0; // 3의 배수의 개수를 세기 위한 변수
+		int sum = 0; // 3의 배수의 합계를 구하기 위한 변수
+		
+		for(int i = 1; i <= 20; i++) {
+			
+			if( i % 3 == 0 ) {
+				System.out.print(i + " ");
+				count++; // 3의 배수일 때마다 카운트 누적
+				sum += i; // 3의 배수일 때마다 합계 누적
+			}
+		}
+		
+		System.out.println(": " + count + "개");
+		System.out.println("3의 배수 합계 : " + sum);
+		
+	}
+	
+	public void ex21() {
+		
+		// 2중 for문과 count를 이용해서 아래모양 출력하기
+		
+		// 1  2  3  4
+		// 5  6  7  8
+		// 9 10 11 12
+		
+		int count = 1;
+		
+		for(int x = 1; x <= 3; x++) { // 3줄
+			
+			for(int i = 1; i <= 4 ; i++) { // 4칸
+				
+				System.out.printf("%3d", count);
+				count++;
+			}
+			
+			System.out.println();
+		}
+	}
+	
+	public void ex22() {
+		
+		for(int i = 1; i <= 9; i++) {
+			
+			for(int j = 2; j <= 9; j++) {
+				System.out.printf("%-2d X %-2d = %-2d      ", j, i, j * i);
+			}
+			
+			System.out.println();
+		}
+		
+	}
+	
 
 
 }
