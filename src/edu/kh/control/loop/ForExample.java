@@ -319,7 +319,7 @@ public class ForExample {
 			
 			for(int num = 1; num <=9; num++) { // 각 단에 곱해질 수 1~9까지 차례대로 증가
 				
-				System.out.printf("%2d X %2d = %2d  ", dan, num, dan * num);
+				System.out.printf("%2d X %2d = %2d   ", dan, num, dan * num);
 
 			}
 			
@@ -338,7 +338,7 @@ public class ForExample {
 			
 			for(int num = 1; num <= 9; num++) { // 수 1 -> 9 정
 				
-				System.out.printf("%2d X %2d = %2d  ", dan, num, dan * num);
+				System.out.printf("%2d X %2d = %2d   ", dan, num, dan * num);
 			}
 			
 			// 한단 출력 종료시점에 줄바꿈
@@ -359,6 +359,7 @@ public class ForExample {
 		for(int i = 1; i <= 5; i++) { // 5바퀴 반복하는 for문
 			
 			for(int j = 1; j <= 5; j++) { // 12345 한 줄 출력하는 for문
+
 				System.out.print(j);
 			}
 			
@@ -390,7 +391,7 @@ public class ForExample {
 		// 1234
 		
 		// 현재 바퀴수와 마지막 찍히는 수가 똑같다(Hint)
-		
+
 		for(int i = 1; i <= 4; i++) { // 줄반복
 			
 			for(int j = 1; j <= i; j++) { // 출력반복
@@ -435,8 +436,8 @@ public class ForExample {
 			
 			if( i % 3 == 0 ) {
 				System.out.print(i + " ");
-				count++; // 3의 배수일 때마다 카운트 누적
-				sum += i; // 3의 배수일 때마다 합계 누적
+				count++; // 3의 배수일 때마다 카운트 누적 count = count + 1
+				sum += i; // 3의 배수일 때마다 합계 누적 sum = sum + i
 			}
 		}
 		
@@ -477,6 +478,24 @@ public class ForExample {
 			
 			System.out.println();
 		}
+		
+	}
+	
+	public void ex23() {
+		// 4의 배수일 때 줄바꿈 하기
+		// 1  2  3  4
+		// 5  6  7  8
+		// 9 10 11 12
+		
+		for(int i = 1; i <= 12; i++) {
+			if(i % 4 == 0) {
+				System.out.print(i);
+				System.out.println();
+			} else {
+				System.out.print(i + " ");
+			}
+		}
+		
 		
 	}
 	

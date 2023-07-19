@@ -92,14 +92,12 @@ public class LoopPractice {
 		
 		System.out.print("숫자 : ");
 		int num = sc.nextInt();
-	
-		int count = 0;
 		
-		if(num < 2 || num > 9) {
-			System.out.println("2~9 사이 숫자만 입력해주세요");
+		if (num < 2 || num > 9) {
+			System.out.println("2~9 사이 숫자만 입력해주세요.");
 		} else {
 			for(int i = num; i <= 9; i++) {
-				System.out.printf("===== %d단 =====\n", i);
+				System.out.printf("====%d단=====\n", i);
 				for(int j = 1; j <= 9; j++) {
 					System.out.printf("%d X %d = %d\n", i, j, i * j);
 				}
@@ -109,7 +107,7 @@ public class LoopPractice {
 	
 	public void practice7() {
 		
-		System.out.print("정수 입력 : ");
+		/*System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
 		
 		for(int i = 1; i <= num; i++) {
@@ -118,17 +116,27 @@ public class LoopPractice {
 				System.out.print("*");
 			}
 			System.out.println();
+		}*/
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		String str = "";
+		
+		for(int i = 1; i <= num; i++) {
+			str = str + "*";
+
+			System.out.println(str);
 		}
 	}
 	
 	public void practice8() {
-		
+
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();
 		
 		for(int i = 1; i <= num; i++) {
 			
-			for(int j = 4; j >= i; j--) {
+			for(int j = num; j >= i; j--) {
 				System.out.print("*");
 			}
 			System.out.println();

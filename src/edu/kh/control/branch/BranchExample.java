@@ -147,16 +147,16 @@ public class BranchExample {
 		// ..
 		// 39
 		
-		for(int i = 1; i <= 100; i++) {
+		for(int i = 1; i <= 10; i++) {
 			
-			if(i == 40) {
+			if(i == 7) {
 				break;
 			}
 			
-			if(i % 5 == 0) {
+			if(i % 2 == 0) {
 				continue;
 			}
-			System.out.println(i);
+			System.out.println(i);//135
 		}
 	}
 	

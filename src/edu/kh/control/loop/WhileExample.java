@@ -111,6 +111,9 @@ public class WhileExample {
 			
 		} while( input != 0 );
 		
+
+		System.out.println("합계 : " + sum);
+		
 	}
 	
 	
